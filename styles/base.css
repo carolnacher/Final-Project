@@ -583,7 +583,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background-image: linear-gradient(#a64b00, #981c00);
+  background-image: linear-gradient(#c78149, #cb6f5b);
   color: rgb(3, 3, 3);
   padding: 12px 20px;
   border: none;
