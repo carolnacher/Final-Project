@@ -111,17 +111,12 @@
         order: 2;
         width: 80%;
         position: absolute;
-        /* Cambiado a absolute */
         top: 30%;
-        /* Despliega el menú hacia abajo */
         right: 20px;
-        /* Ajusta el margen derecho según sea necesario */
         background-color: #002400;
         border-radius: 4px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         font-size: 20px;
-       
-        /* Asegura que esté por encima de otros elementos */
     }
 
 
@@ -135,48 +130,43 @@
 
     .gallery img {
         width: 100%;
-        /* Ajustar el ancho de las imágenes */
         height: auto;
-        /* Ajustar la altura de las imágenes */
         clip-path: none;
-        /* Eliminar el recorte de las imágenes */
         border-radius: 0;
-        /* Eliminar el borde redondeado */
         grid-column: auto / span 1;
-        /* Restaurar la distribución de columnas */
         transition: clip-path 0.25s, filter 0.75s;
-        /* Mantener las transiciones */
+        
     }
 
     .gallery img:nth-child(5n - 1) {
         grid-column: auto / span 1;
-        /* Restaurar la distribución de columnas */
+        
     }
 
     .gallery img:hover,
     .gallery img:focus {
         clip-path: none;
-        /* Eliminar el recorte al hacer hover/focus */
+      
         transition: clip-path 0.25s, filter 0.25s;
-        /* Mantener las transiciones */
+        
     }
 
     /*button dark mode*/
     .switch {
         position: absolute;
-        /* Cambiado a static */
+       
         top: 10px;
         
         right: -10px;
         bottom: -10px;
-        /* O ajusta el ancho según tus necesidades */
+        
         text-align: center;
-        /* Centra el botón */
+        
         margin-top: 20px;
-        /* Espacio adicional arriba */
+        
     }
     .switch input {
-        /* Oculta el checkbox */
+       
         position: absolute;
         opacity: 0;
         width: 0;
