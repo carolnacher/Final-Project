@@ -46,7 +46,6 @@ fetch('data/rentatype.json')
         paragraph.textContent = `Max Persons: ${vehicle.max_persons}`;
         detailsLink.textContent = 'Details';
         detailsLink.href = vehicle.details_link;
- 
         detailsLink.target = '_blank';
 
         
