@@ -28,11 +28,11 @@
         content="https://img.freepik.com/vector-gratis/icono-redes-sociales-vector-instagram-7-junio-2021-bangkok-tailandia_53876-136728.jpg?w=740&t=st=1710992041~exp=1710992641~hmac=f9fa4f02b337055090319d74e02b65af50dc411ab8c73a7d8580e6fd8ff70736">
     <meta property="og:url" content="https://www.instagram.com/">
     <meta property="og:type" content="social-media">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/media.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <link rel="icon" href="favicon(1).ico">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
     <title>Scooter Rental go further</title>
@@ -53,7 +53,7 @@
                     <li class="link"><a href="index.html">Home</a></li>
                     <li class="link"><a href="rental.html">Rental Information</a></li>
                     <li class="link"><a href="reservation.html">Reservation</a></li>
-                    <li class="link"><a href="contactus.html">Contac Us</a></li>
+                    <li class="link"><a href="contacus.html">Contac Us</a></li>
                 </ul>
             </nav>
             <label for="mode" class="switch">
@@ -66,14 +66,39 @@
         </button>
 
 
+        <div class="content-text">
+            <h1>Cozumel</h1>
+            <h1>Cozumel</h1>
+        </div>
 
-        <main class="formPage">
 
-           
-            <div>
-                <p>Thank you for completing the form, it has been loaded correctly.</p>
-                <p>We will communicate you soon!</p>
-            </div>
+
+        <main>
+            <section class="contact">
+                <h1>Contact Us</h1>
+                <p>Address: 8 de octobe avenue</p>
+                <p>Phone: 987+ 1642 1354641</p>
+                <p>Email: scootercozumel@gmail.com </p>
+            </section>
+            <form form method="get" action="thankyou.html" id="form1">
+                <fieldset>
+                    <label>* First Name<input type="text" name="fname" id="fname" required></label>
+
+                    <label>* Last Name<input type="text" name="lname" id="lname" required></label>
+                    <label for="email">* Email:</label>
+                    <div class="email-input-container"></div>
+                        <input type="email" id="email" name="email" placeholder="Your email address"
+                            title="A valid email address." required>
+                        <div>
+                            <label>Aditional comments <textarea id="comments" name="comments"></textarea></label>
+                        </div>
+                </fieldset>
+
+                <button type="submit">Send</button>
+            </form>
+            <section>
+                <div id="map"></div>
+            </section>
 
         </main>
         <footer>
@@ -98,7 +123,7 @@
                 </ul>
             </div>
         </footer>
-        <script src="scripts/getdates.js"></script>
+        <script src="scripts/form.js"></script>
         <script src="scripts/hamburguer.js"></script>
         <script src="scripts/darkmode.js"></script>
         <script src="scripts/weather.js"></script>
