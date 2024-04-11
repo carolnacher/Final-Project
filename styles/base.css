@@ -407,15 +407,14 @@ main.formPage {
 }
 /*page rental*/
 
-main.rentalpage {
+.main.rentalpage {
 	margin: 0 auto;
-  margin-top: 50;
+	margin-top: 50px; /* Añadí "px" para indicar píxeles */
 	padding: 0.5rem;
 	max-width: 700px;
 	background-color: #fff;
 	font-family: Roboto, Helvetica, sans-serif;
 }
-
 .menuRental {
 	margin: 1rem auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
