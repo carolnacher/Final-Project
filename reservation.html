@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Form page discloses the reservation terms and discount information for the services offered to the current date.">
+    <meta name="author" content="Carol Nacher">
+    <meta property="og:title" content="Cozumel scooter Form Page ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carolnacher.github.io/wdd230/">
+    <meta property="og:image"
+        content="https://uy.e-scooter.co/i/ya/ma/yamaha-neos/full/2022-yamaha-neo-electric-scooter-first-look-urban-mobility-4.webp">
+
+    <meta property="og:title" content="Facebook">
+    <meta property="og:description"
+        content="This is the social media page on Facebook when the user can get more information and do question">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png">
+    <meta property="og:url" content="https://www.facebook.com/">
+    <meta property="og:type" content="social-media">
+
+    <meta property="og:title" content="Instagram">
+    <meta property="og:description"
+        content="This is the social media page of Instagram when the user can get more informationa and share with other this information">
+    <meta property="og:image"
+        content="https://img.freepik.com/vector-gratis/icono-redes-sociales-vector-instagram-7-junio-2021-bangkok-tailandia_53876-136728.jpg?w=740&t=st=1710992041~exp=1710992641~hmac=f9fa4f02b337055090319d74e02b65af50dc411ab8c73a7d8580e6fd8ff70736">
+    <meta property="og:url" content="https://www.instagram.com/">
+    <meta property="og:type" content="social-media">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="icon" href="favicon(1).ico">
+
+    <title> Terms Recervation - Form </title>
+</head>
+
+<body>
+
+    <div id="content">
+        <header>
+            <nav class="navigation">
+                <ul>
+                    <a href="index.html" id="logo-cozumel" aria-label="home page">
+                        <img class="logo" src="images/cozu.jpg" alt="HealthyBites logo">
+
+                    </a>
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="rental.html">Rental Information</a></li>
+                    <li class="link"><a href="reservation.html">Reservation</a></li>
+                    <li class="link"><a href="contacus.html">Contac Us</a></li>
+                </ul>
+            </nav>
+            <label for="mode" class="switch">
+                <input type="checkbox" id="mode">
+                <span class="slider round"></span>
+            </label>
+            <h1> Reservation - Form </h1>
+        </header>
+        <button id="menu" class="button-menu"></button>
+        <main class="formPage">
+
+            <form method="get" action="thankyou.html" class="wf1">
+                <fieldset>
+                    <fieldset class="form1">
+                        <legend>Personal Information</legend>
+                        <label>* First Name<input type="text" name="fname" id="fname" required></label>
+                        <label>* Last Name<input type="text" name="lname" id="lname" required></label>
+                        <label for="email">* Email:</label>
+                        <div class="email-input-container">
+                            <input type="email" id="email" name="email" placeholder="Your email address"
+                                title="A valid email address." required>
+                        </div>
+                        <label>* Phone<input type="tel" name="phone" id="phone-number" placeholder="12345678"
+                                required></label>
+                        <label for="contrys">* Contry:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                        </select>
+                        <label for="state">* State:</label>
+                        <input type="text" id="state" name="state" placeholder="Enter your state" required>
+                    </fieldset>
+
+                    
+                    <fieldset>
+                        <legend>Rental Information</legend>
+                        <div class="housing">
+                            <label>Cruise line <input type="text" name="Cruisename" id="Cruisename"
+                                    placeholder="MSC cruise"></label>
+                            <label>Housing<input type="text" name="Hname" id="Hname"
+                                    placeholder="hotel or Airbnb"></label>
+
+                        </div>
+                        <label for="arrival-date">Arrival Date:</label>
+                        <input type="date" id="arrival-date" name="arrival-date" required>
+
+                        <label for="departure-date">Departure Date:</label>
+                        <input type="date" id="departure-date" name="departure-date" required>
+                        <script>
+                            var today = new Date().toISOString().split('T')[0];
+                            document.getElementById('arrival-date').setAttribute('min', today);
+                            document.getElementById('departure-date').setAttribute('min', today);
+                        </script>
+                        <label for="rental-period">Rental Period:</label>
+                        <select id="rental-period" name="rental-period" required>
+                            <option value="">Select Period</option>
+                            <option value="1-day">1 Day</option>
+                            <option value="2-days"> 2 Days</option>
+                            <option value="1-week">1 Week</option>
+                            <option value="2-weeks">2 Weeks</option>
+                            <option value="1-month">1 Month</option>
+                        </select>
+                        <legend>Rental Type</legend>
+                        <div class="rental-options">
+                            <label><input type="radio" name="rentaltype" value="FD">Full Day</label>
+                            <label><input type="radio" name="rentaltype" value="half">Half Day(3 hrs)</label>
+                            
+                        </div>
+                        <div>
+                            <label>Aditional comments <textarea id="comments" name="comments"></textarea></label>
+                        </div>
+                    </fieldset>
+                   
+
+
+                </fieldset>
+                <div class="last-fieldset">
+                    <fieldset>
+                        <legend>Rental Terms</legend>
+                        <div class="Rental-Services">
+                            <div data-service="rsa">
+                                <h2>Rental Services and Agreements</h2>
+
+                                <h3>We invite you to learn about the requirements and benefits of our reservation
+                                    contracts.</h3>
+                                <ul>
+                                    <li>​✔️​ - Unlimited mileage.</li>
+                                    <li>✔️​ - Liability insurance is included.</li>
+                                    <li>✔️​ - Insurance is available for purchase</li>
+                                    <li>✔️​ - Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                                    <li>✔️ - We have the following payment methods: Google Pay, Apple Pay, cash, credit
+                                        card, debit card or Venmo.</li>
+                                </ul>
+                            </div>
+
+                            <div data-membership="Bronze">
+                                <h3>Important!​</h3>
+                                <ul>
+                                    <li>✔️ - To confirm reservations, it required a $50 security deposit to confirm
+                                        reservations. </li>
+                                    <li>✔️​ - A valid driver's license is required in hand at the time of rental.
+                                    </li>
+                                    <li>✔️​ - Rentals may be returned to either physical location.</li>
+
+                                    <li>❌​ - No one under the age of 12 years of age are allowed to ride on the
+                                        scooters.</li>
+                                    <li>❌​ - Personalized consultation sessions with industry expertsFuel charge is
+                                        not
+                                        included.</li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <input type="hidden" name="timestamp" id="timestamp">
+
+
+                    </fieldset>
+                </div>
+                <div class="button-container">
+                    <button id="clearForm" type="button">Clear Form</button>
+                    <input type="submit" value="Send">
+                </div>
+
+            </form>
+        </main>
+    </div>
+
+
+    <footer>
+
+        <div class="social-media">
+
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f icon"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter icon"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in icon"></i></a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/Cozumel/@20.4255199,-87.0284159,11z/data=!4m6!3m5!1s0x8f4ef8efb0d19327:0x342ebcae5c018bfc!8m2!3d20.4229839!4d-86.9223432!16zL20vMDFibmQ3?entry=ttu"><i
+                            class="fab fa-google-plus-g icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts/clearform.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/hamburguer.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/contrys.js"></script>
+
+</body>
+
+</html>

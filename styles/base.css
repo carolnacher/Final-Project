@@ -1,0 +1,510 @@
+/*nab-bar*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #000;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+nav {
+  height: 4rem;
+  background-color: #222;
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 9999;
+}
+
+a {
+  font-family: Poppins;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: white;
+  position: absolute;
+  left: 1rem;
+}
+
+.link {
+  position: relative;
+  list-style: none;
+  padding: 4px 0;
+}
+
+.link::after,
+.link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.6s ease-in-out;
+}
+
+.link::after {
+  top: 0;
+  right: 0;
+  transform-origin: right;
+
+}
+
+.link::before {
+  left: 0;
+  bottom: 0;
+  transform-origin: left;
+}
+
+.link:hover::after,
+.link:hover::before {
+  width: 100%;
+}
+
+/*dark mode*/
+
+.switch {
+  position: fixed;
+  /* Cambiado a fixed */
+  width: 55px;
+  height: 26px;
+  right: 20px;
+  /* Ajusta este valor según lo necesites */
+  top: 11%;
+  /* Posiciona en el centro vertical */
+  transform: translateY(-50%);
+  /* Centra verticalmente */
+  z-index: 999;
+  /* Asegura que esté por encima de otros elementos */
+}
+
+.slider {
+  position: absolute;
+  top: 10px;
+  left: -140px;
+  right: 144px;
+  bottom: -10px;
+  /* Ajusta el tamaño del switch según lo necesites */
+  background-color: #002400;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body {
+  background: #eee;
+  color: #000;
+
+}
+
+body.dark-mode {
+  background: #000;
+  color: #fff;
+}
+
+.switch input {
+  /* Oculta el checkbox */
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+body.dark-mode label,
+body.dark-mode legend {
+  color: #fff;
+  /* Color blanco */
+}
+
+/*banner*/
+#closeBanner {
+  background-image: linear-gradient(#f5b055, #f73e3e);
+  border-radius: 20px;
+  text-align: center;
+  padding: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  color: #000;
+  font-family: var(--paragraph-font);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+section {
+  display: ruby-text;
+  padding: 10% 0 0;
+}
+
+.maxtemp {
+  color: #f1082b;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+
+#closeBanner:hover {
+  transform: scale(1);
+  box-shadow: 0 0 100px #097f25;
+
+}
+
+#banner {
+  position: relative;
+  background-image: radial-gradient(#050502, #0502022c);
+  color: #ffffff;
+  font-family: var(--paragraph-font);
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 18px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+#banner p {
+  margin: 5px;
+}
+
+/*information weather*/
+.information {
+  display: flex;
+  justify-content: space-evenly;
+  height: 550px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.mapboxgl-control-container {
+  display: none;
+}
+
+.mapboxgl-canvas {
+  align-items: center;
+  max-width: 550px;
+  max-height: 550px;
+  height: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.weather {
+  background-color: #6ac4f8;
+  opacity: 0.8;
+  padding: 3%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#weatherInfo {
+  align-items: center;
+}
+
+/*gallery*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 105px);
+  grid-auto-rows: 105px;
+  margin: 120px 0 120px 0;
+  justify-content: center;
+  width: 100%;
+
+  &:has(:hover) img:not(:hover),
+  &:has(:focus) img:not(:focus) {
+    filter: brightness(0.5) contrast(0.5);
+  }
+
+  & img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
+    transition: clip-path 0.25s, filter 0.75s;
+    z-index: 1;
+    position: relative;
+    grid-column: auto / span 2;
+    border-radius: 5px;
+
+    &:nth-child(5n - 1) {
+      grid-column: 2 / span 2
+    }
+
+    &:hover,
+    &:focus {
+      clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+      z-index: 2;
+      transition: clip-path 0.25s, filter 0.25s;
+    }
+
+    &:focus {
+      outline: 1px dashed black;
+      outline-offset: -5px;
+    }
+  }
+}
+
+/*social media*/
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+  background-color: #333;
+  margin-top: 5%;
+}
+
+footer .social-media ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-media li {
+  margin: 0 10px;
+}
+
+footer .social-media a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #016933;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+footer .social-media a:hover {
+  background-color: #01451a;
+}
+
+footer .social-media a i {
+  color: #fff;
+}
+
+/*button-reservation*/
+
+.book {
+  background-image: linear-gradient(#f5b055, #f73e3e);
+  border-radius: 20px;
+  text-align: center;
+  padding: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  color: #000;
+  font-family: var(--paragraph-font);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*text-efect*/
+
+.content-text {
+  position: relative;
+  height: 60%;
+  width: 50%;
+}
+
+.content-text h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(1%, -60%);
+  font-size: 8vw;
+}
+
+.content-text h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.1vw #28f6c2;
+}
+
+.content-text h1:nth-child(2) {
+  color: #28f6c2;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+/*thankyou Page */
+
+main.formPage {
+  height: 700px;
+}
+
+.formPage p {
+  align-items: center;
+  text-align: center;
+}
+/*page rental*/
+
+main.rentalpage {
+	margin: 0 auto;
+  margin-top: 50px;
+	padding: 0.5rem;
+	max-width: 700px;
+	background-color: #fff;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.menuRental {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #bed;
+	text-align: center;
+}
+
+.menuRental button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+.grid section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #eee;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-family: "Caveat", cursive;
+}
+
+.grid.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.grid.list section > * {
+	margin: 0 1rem;
+}
+
+.grid.list section img {
+	display: none; 
+}
+
+.grid.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.grid .list section:nth-child(even) {
+	background-color: #bed;
+}
+
+.grid section h3 {
+	font-size: 1.5rem;
+}
+
+.grid section p {
+	font-weight: 600;
+	font-size: smaller;
+}
+
+.grid section a {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 0.85rem;
+	color: navy;
+	letter-spacing: 1.1pt;
+}
+
+.grid img {
+	height: 75px;
+	max-width: 100%; 
+}
