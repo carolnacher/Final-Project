@@ -1,4 +1,4 @@
-fetch('data\rentatype.json')
+fetch('data/rentatype.json')
   .then(response => response.json())
   .then(data => {
     const display = document.querySelector("article");
