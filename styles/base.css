@@ -409,7 +409,7 @@ main.formPage {
 
 main.rentalpage {
 	margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 50;
 	padding: 0.5rem;
 	max-width: 700px;
 	background-color: #fff;
@@ -429,82 +429,82 @@ main.rentalpage {
 	font-weight: 700;
 }
 
-.grida section {
+.grid section {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
 	background-color: #eee;
 }
 
-.grida {
+.grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 5px;
 	align-items: center;
 }
 
-.grida section {
+.grid section {
 	text-align: center;
 }
 
-.grida img {
+.grid img {
 	border: 1px solid #fff;
 	box-shadow: 0 0 10px #333;
 }
 
-.grida section > * {
+.grid section > * {
 	margin: 0.1rem;
 }
 
-.grida h3 {
+.grid h3 {
 	font-family: "Caveat", cursive;
 }
 
-.grida.list {
+.grid.list {
 	display: flex;
 	flex-direction: column;
 }
 
-.grida.list section {
+.grid.list section {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
 	margin: 0;
 	padding: 0.25rem;
 }
 
-.grida.list section > * {
+.grid.list section > * {
 	margin: 0 1rem;
 }
 
-.grida.list section img {
+.grid.list section img {
 	display: none; 
 }
 
-.grida.list section h3 {
+.grid.list section h3 {
 	font-size: 1rem;
 	font-family: Roboto, Helvetica, sans-serif;
 }
 
-.grida .list section:nth-child(even) {
+.grid .list section:nth-child(even) {
 	background-color: #bed;
 }
 
-.grida section h3 {
+.grid section h3 {
 	font-size: 1.5rem;
 }
 
-.grida section p {
+.grid section p {
 	font-weight: 600;
 	font-size: smaller;
 }
 
-.grida section a {
+.grid section a {
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 0.85rem;
 	color: navy;
 	letter-spacing: 1.1pt;
 }
 
-.grida img {
+.grid img {
 	height: 75px;
 	max-width: 100%; 
 }
